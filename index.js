@@ -21,6 +21,6 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }).
         console.log(`connected successfully`);
     }).catch(err => console.log('Error while connect to database', err));
 
-app.listen(8000, () => console.log('Server started on port 8000'));
+app.listen(process.env.PORT || 8000, () => console.log('Server started on port 8000'));
 
 
